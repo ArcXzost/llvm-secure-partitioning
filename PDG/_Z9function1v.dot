@@ -1,0 +1,14 @@
+digraph _Z9function1v {
+
+".str.8" -> "  %1 = call i32 (ptr, ...) @printf(ptr noundef @.str.8)";
+".str.8" [ color = red ]
+"printf" -> "  %1 = call i32 (ptr, ...) @printf(ptr noundef @.str.8)";
+"printf" [ color = red ]
+"_Z9function2v" -> "  call void @_Z9function2v()";
+"_Z9function2v" [ color = red ]
+"_Z9function3v" -> "  call void @_Z9function3v()";
+"_Z9function3v" [ color = red ]
+"_Z9function4v" -> "  call void @_Z9function4v()";
+"_Z9function4v" [ color = red ]
+
+}

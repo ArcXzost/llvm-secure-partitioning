@@ -1,0 +1,14 @@
+digraph _Z9function7v {
+
+"passkey" -> "  %1 = load i32, ptr @passkey, align 4";
+"passkey" [ color = red ]
+"  %2 = add nsw i32 %1, 1" -> "  %1 = load i32, ptr @passkey, align 4";
+"  store i32 %2, ptr @passkey, align 4" -> "  %2 = add nsw i32 %1, 1";
+"passkey" -> "  store i32 %2, ptr @passkey, align 4";
+"passkey" [ color = red ]
+".str.5" -> "  %3 = call i32 (ptr, ...) @printf(ptr noundef @.str.5)";
+".str.5" [ color = red ]
+"printf" -> "  %3 = call i32 (ptr, ...) @printf(ptr noundef @.str.5)";
+"printf" [ color = red ]
+
+}

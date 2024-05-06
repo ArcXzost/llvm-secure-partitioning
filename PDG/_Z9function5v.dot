@@ -1,0 +1,8 @@
+digraph _Z9function5v {
+
+".str" -> "  %1 = call i32 (ptr, ...) @printf(ptr noundef @.str)";
+".str" [ color = red ]
+"printf" -> "  %1 = call i32 (ptr, ...) @printf(ptr noundef @.str)";
+"printf" [ color = red ]
+
+}

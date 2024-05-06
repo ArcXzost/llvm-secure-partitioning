@@ -1,0 +1,5 @@
+digraph "CFG for '_Z9function8v' function" {
+	label="CFG for '_Z9function8v' function";
+
+	Node0x55a2dda21f20 [shape=record,color="#b70d28ff", style=filled, fillcolor="#b70d2870",label="{%0:\l  %1 = load i32, ptr @globalCount, align 4\l  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.6, i32 noundef %1)\l  %3 = call i32 (ptr, ...) @printf(ptr noundef @.str.7)\l  ret void\l}"];
+}

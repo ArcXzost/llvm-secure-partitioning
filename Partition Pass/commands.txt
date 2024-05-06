@@ -1,0 +1,52 @@
+clang++ -c -Wall -Werror -fpic CallGraphPass.cpp -o CallGraphPass.o `llvm-config --cxxflags`
+clang++ -shared -o libCallGraphPass.so CallGraphPass.o `llvm-config --ldflags --libs --system-libs`
+opt -load ./libCallGraphPass.so -call-graph --enable-new-pm=0 < input.ll > /dev/null
+
+[witcher@Manjaro LLVM]$ clang++ -c -Wall -Werror -fpic CallGraphPass.cpp -o CallGraphPass.o `llvm-config --cxxflags`
+[witcher@Manjaro LLVM]$ clang++ -shared -o libCallGraphPass.so CallGraphPass.o `llvm-config --ldflags --libs --system-libs`
+[witcher@Manjaro LLVM]$ opt -load ./libCallGraphPass.so -call-graph --enable-new-pm=0 < input.ll > /dev/null
+
+        === Dependence Graph(Calls) ===
+
+Function ID: 6, Name: _Z9function7v
+Function ID: 5, Name: _Z9function4v
+Function ID: 2, Name: _Z9function6v
+Function ID: 0, Name: _Z9function5v
+Function ID: 9, Name: main
+        Called Function ID: 6, Name: _Z9function7v
+        Called Function ID: 7, Name: _Z9function8v
+        Called Function ID: 8, Name: _Z9function1v
+Function ID: 7, Name: _Z9function8v
+Function ID: 8, Name: _Z9function1v
+        Called Function ID: 3, Name: _Z9function2v
+        Called Function ID: 4, Name: _Z9function3v
+        Called Function ID: 5, Name: _Z9function4v
+Function ID: 3, Name: _Z9function2v
+        Called Function ID: 0, Name: _Z9function5v
+Function ID: 4, Name: _Z9function3v
+        Called Function ID: 2, Name: _Z9function6v
+Function ID: 8, Name: _Z9function1v
+        Called Function ID: 3, Name: _Z9function2v
+        Called Function ID: 4, Name: _Z9function3v
+        Called Function ID: 5, Name: _Z9function4v
+Function ID: 4, Name: _Z9function3v
+        Called Function ID: 2, Name: _Z9function6v
+Function ID: 7, Name: _Z9function8v
+Function ID: 3, Name: _Z9function2v
+        Called Function ID: 0, Name: _Z9function5v
+
+        === Function Partitions ===
+
+=== Secure Functions ===
+ID: 0, Name: _Z9function5v
+ID: 2, Name: _Z9function6v
+ID: 3, Name: _Z9function2v
+ID: 4, Name: _Z9function3v
+ID: 5, Name: _Z9function4v
+ID: 6, Name: _Z9function7v
+ID: 8, Name: _Z9function1v
+
+=== Non-Secure Functions ===
+ID: 9, Name: main
+ID: 7, Name: _Z9function8v
+ID: 1, Name: printf

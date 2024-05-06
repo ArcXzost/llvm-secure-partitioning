@@ -1,0 +1,15 @@
+digraph _Z9function8v {
+
+"globalCount" -> "  %1 = load i32, ptr @globalCount, align 4";
+"globalCount" [ color = red ]
+".str.6" -> "  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.6, i32 noundef %1)";
+".str.6" [ color = red ]
+"  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.6, i32 noundef %1)" -> "  %1 = load i32, ptr @globalCount, align 4";
+"printf" -> "  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.6, i32 noundef %1)";
+"printf" [ color = red ]
+".str.7" -> "  %3 = call i32 (ptr, ...) @printf(ptr noundef @.str.7)";
+".str.7" [ color = red ]
+"printf" -> "  %3 = call i32 (ptr, ...) @printf(ptr noundef @.str.7)";
+"printf" [ color = red ]
+
+}

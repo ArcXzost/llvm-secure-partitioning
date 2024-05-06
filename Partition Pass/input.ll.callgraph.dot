@@ -1,0 +1,31 @@
+digraph "Call graph: input.ll" {
+	label="Call graph: input.ll";
+
+	Node0x55c0e0bed2f0 [shape=record,label="{_Z9function1v}"];
+	Node0x55c0e0bed2f0 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bed2f0 -> Node0x55c0e0bed860;
+	Node0x55c0e0bed2f0 -> Node0x55c0e0bed940;
+	Node0x55c0e0bed2f0 -> Node0x55c0e0beda70;
+	Node0x55c0e0bed3a0 [shape=record,label="{printf}"];
+	Node0x55c0e0bed860 [shape=record,label="{_Z9function2v}"];
+	Node0x55c0e0bed860 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bed860 -> Node0x55c0e0bedba0;
+	Node0x55c0e0bed940 [shape=record,label="{_Z9function3v}"];
+	Node0x55c0e0bed940 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bed940 -> Node0x55c0e0bedc20;
+	Node0x55c0e0beda70 [shape=record,label="{_Z9function4v}"];
+	Node0x55c0e0beda70 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bedba0 [shape=record,label="{_Z9function5v}"];
+	Node0x55c0e0bedba0 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bedc20 [shape=record,label="{_Z9function6v}"];
+	Node0x55c0e0bedc20 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bedeb0 [shape=record,label="{_Z9function7v}"];
+	Node0x55c0e0bedeb0 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bedf60 [shape=record,label="{_Z9function8v}"];
+	Node0x55c0e0bedf60 -> Node0x55c0e0bed3a0;
+	Node0x55c0e0bee2a0 [shape=record,label="{main}"];
+	Node0x55c0e0bee2a0 -> Node0x55c0e0bed2f0;
+	Node0x55c0e0bee2a0 -> Node0x55c0e0bedeb0;
+	Node0x55c0e0bee2a0 -> Node0x55c0e0bedf60;
+	Node0x55c0e0bee2a0 -> Node0x55c0e0bed3a0;
+}

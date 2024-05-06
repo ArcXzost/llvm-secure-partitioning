@@ -1,0 +1,7 @@
+digraph " for 'main' function" {
+	label=" for 'main' function";
+
+	Node0x562f232cae40 [shape=record,label="{Post dominance root node}"];
+	Node0x562f232cae40 -> Node0x562f23297dd0;
+	Node0x562f23297dd0 [shape=record,label="{%0:\l  %1 = alloca i32, align 4\l  store i32 0, ptr %1, align 4\l  call void @_Z9function1v()\l  call void @_Z9function7v()\l  call void @_Z9function8v()\l  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.9)\l  ret i32 0\l}"];
+}

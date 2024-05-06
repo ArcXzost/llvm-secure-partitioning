@@ -1,0 +1,15 @@
+digraph main {
+
+"  store i32 0, ptr %1, align 4" -> "  %1 = alloca i32, align 4";
+"_Z9function1v" -> "  call void @_Z9function1v()";
+"_Z9function1v" [ color = red ]
+"_Z9function7v" -> "  call void @_Z9function7v()";
+"_Z9function7v" [ color = red ]
+"_Z9function8v" -> "  call void @_Z9function8v()";
+"_Z9function8v" [ color = red ]
+".str.9" -> "  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.9)";
+".str.9" [ color = red ]
+"printf" -> "  %2 = call i32 (ptr, ...) @printf(ptr noundef @.str.9)";
+"printf" [ color = red ]
+
+}
